@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 from sklearn.metrics import classification_report
-#%%
+#%% read data
 def read_data(file_path):
     df = pd.read_csv(file_path, header=[0,1,2])
     acol = [14*i+1 for i in range(6)] + [14*i+2 for i in range(6)] + [14*i+3 for i in range(6)]
@@ -26,7 +26,7 @@ def convert_to_float(x):
     except:
         return np.nan
 
-#%%
+#%% plot confusion matrix
 from sklearn import metrics
 from matplotlib import pyplot as plt
 import seaborn as sns
@@ -48,7 +48,7 @@ def show_confusion_matrix(validations, predictions, LABELS):
     plt.xlabel('Predicted Label')
     plt.show()
 
-#%%
+#%% sliding window
 def creat_segment(df, size, ovlp_ratio, label_name):
 
     N_FEATURES = 36
@@ -72,7 +72,7 @@ def creat_segment(df, size, ovlp_ratio, label_name):
 
     return reshaped_segments, labels
 
-#%%
+#%% normalization
 def normalise(df):
     
     for i in range(0, df.shape[1]):
@@ -132,25 +132,5 @@ def points_prediction(df, y_pred, y_gt, size, ovlp):
     return df_pred.astype(int), y_gt[0:len(df_pred)].astype(int)
     
     
-
-
-       
-#%%
-
-if __name__ == '__main__':
-
-    # load data
-    df_1 = read_data(r'.\20200707-183957-subject_1.csv')
-    seg_1 = np.array([3620, 30702, 42332, 68296, 77791, 103831, 111332, 137167, 205678, 231569, 168282, 194433])
-    
-    df_1['activity'] = 0
-    
-    for i in range(0,11,2):
-        df_1.loc[seg_1[i]:seg_1[i+1], 'activity'] = i/2+1
-    
-    size = 1280
-    ovlp_ratio = 0.5
-    
-    x_train, y_train = creat_segment(df_1, size, ovlp_ratio, 'activity')
     
         
