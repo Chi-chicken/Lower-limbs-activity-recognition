@@ -96,3 +96,34 @@ model.add(Dense(128, activation='relu'))
 # Softmax activation function
 model.add(Dense(6, activation='softmax'))
  ```
+
+### Vlidation(`limbAR.py`)
+```python
+from sklearn import metrics
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+def show_confusion_matrix(validations, predictions, LABELS):
+
+    matrix = metrics.confusion_matrix(validations, predictions)
+    plt.figure(figsize=(6, 4))
+    sns.heatmap(matrix,
+                cmap='coolwarm',
+                linecolor='white',
+                linewidths=1,
+                xticklabels=LABELS,
+                yticklabels=LABELS,
+                annot=True,
+                fmt='d')
+    plt.title('Confusion Matrix')
+    plt.ylabel('True Label')
+    plt.xlabel('Predicted Label')
+    plt.show()
+```
+* MLP
+ * Validation loss
+ ![image](MLP_validation loss.png)
+ * Confusion matrix
+*CNN
+ * Validation loss
+ * Confusion matrix
