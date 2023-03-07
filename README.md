@@ -29,4 +29,29 @@ This project aims to classify the 3 common lower limbs activities (with both lef
     
     return df
  ```
+ * Sliding window
+ ```python
+def creat_segment(df, size, ovlp_ratio, label_name):
+
+    N_FEATURES = 36
+    
+    segments = []
+    labels = []
+    i = 0
+    
+    while size + i <= len(df):
+        sw = df.iloc[i : size+i]
+        # Retrieve the most often used label in this segment
+        label = stats.mode(df[label_name][i: size+i])[0][0]
+        sw = sw.drop(columns=label_name)
+        segments.append(sw)
+        labels.append(label)
+        i = int(i + size*(1-ovlp_ratio))
+
+    # Bring the segments into a better shape
+    reshaped_segments = np.asarray(segments, dtype= np.float32).reshape(-1, size, N_FEATURES)
+    labels = np.asarray(labels)
+
+    return reshaped_segments, labels
+  ```
 
