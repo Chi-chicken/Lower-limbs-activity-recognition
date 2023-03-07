@@ -18,4 +18,15 @@ This project aims to classify the 3 common lower limbs activities (with both lef
 ## Methods
 
 ### Data loading and preprocessing
-Execute file `limbAR.py`
+ * Execute file `limbAR.py`
+ * Load data (`read_data`)
+ * Normalise
+ ```python
+ def normalise(df):
+    
+    for i in range(0, df.shape[1]):
+        df.iloc[:, i] = (df.iloc[:, i]-df.iloc[:, i].min())/(df.iloc[:, i].max()-df.iloc[:, i].min())
+    
+    return df
+ ```
+
