@@ -80,7 +80,7 @@ model.add(Dense(7, activation='softmax'))
 
 print(model.summary())
  ```
- * Build CNN model(`lowerlimb_CNN.py`)
+ * Build CNN model(`lowerlimb_HAR_CNN.py`)
  ```python
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(size,36,1)))
