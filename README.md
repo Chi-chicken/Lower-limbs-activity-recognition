@@ -122,7 +122,7 @@ def show_confusion_matrix(validations, predictions, LABELS):
 ```
 * MLP
  * Validation loss
- ![image](MLP_validation loss.png)
+ ![image]([MLP_validation loss.png])
  * Confusion matrix
 *CNN
  * Validation loss
