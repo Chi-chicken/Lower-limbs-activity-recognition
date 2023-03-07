@@ -2,7 +2,7 @@
 
 This project aims to classify the 3 common lower limbs activities (with both left and right side) of osteoarthritis rehabilitation with 3axes' accelerometers ang gyroscopes. The machine learning models are used to classification.
 
-###### Lower limbs activity
+#### Lower limbs activity
   * right-side straight leg raise (SLR-R)
   * left-side straight leg raise (SLR-L)
   * right-side short-arc exercise (SAE-R)
