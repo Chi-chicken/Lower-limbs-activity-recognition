@@ -122,8 +122,9 @@ def show_confusion_matrix(validations, predictions, LABELS):
 ```
 * MLP
  * Validation loss
- ![image]([MLP_validation loss.png])
+ ![image](https://github.com/Chi-chicken/Lower-limbs-activity-recognition/blob/main/MLP_validation%20loss.png)
  * Confusion matrix
+ ![image](https://github.com/Chi-chicken/Lower-limbs-activity-recognition/blob/main/MLP_confusion%20matrix.png)
 *CNN
  * Validation loss
  * Confusion matrix
