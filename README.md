@@ -54,4 +54,15 @@ def creat_segment(df, size, ovlp_ratio, label_name):
 
     return reshaped_segments, labels
   ```
+  * Split data into training set and testing set(`lowerlimb_HAR.py`)
+```python 
+df_train, df_test = train_test_split(df, test_size=0.3)
+x_train, y_train = df_train.drop(columns='activity'), df_train['activity']
+x_test, y_test = df_test.drop(columns='activity'), df_test['activity']
 
+x_train, y_train = x_train.values, y_train.values  
+x_test, y_test = x_test.values, y_test.values  
+
+y_train_hot = np_utils.to_categorical(y_train)
+
+```
