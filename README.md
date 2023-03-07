@@ -10,7 +10,7 @@ This project aims to classify the 3 common lower limbs activities (with both lef
   * right-side Snee Extension (KE-R)
   * left-side Snee Extension (KE-L)
 
-#### Sensor
+#### Sensors
  * 6 OPAL IMUs (published by APDM, Portland, USA)
  * Sampling rate: 128 Hz
  * Sensors(6) location:  Chest, waist, both thighs, and both shanks
