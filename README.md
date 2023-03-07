@@ -15,3 +15,6 @@ This project aims to classify the 3 common lower limbs activities (with both lef
  * Sampling rate: 128 Hz
  * Sensors(6) location:  Chest, waist, both thighs, and both shanks
 
+## Methods
+
+#### Data loading and preprocessing
