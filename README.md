@@ -1,4 +1,4 @@
-# Lower Limbs Activity Recognition using Machine Learning Method
+# Lower Limbs Activity Recognition using Machine Learning Methods
 
 This project aims to classify the 3 common lower limbs activities (with both left and right side) of osteoarthritis rehabilitation with 3axes' accelerometers ang gyroscopes. The machine learning models are used to classification.
 
