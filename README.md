@@ -18,4 +18,4 @@ This project aims to classify the 3 common lower limbs activities (with both lef
 ## Methods
 
 ### Data loading and preprocessing
-Execute file 'limbAR.py'
+Execute file `limbAR.py`
