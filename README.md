@@ -2,5 +2,5 @@
 
 This project aims to classify the 6 common lower limbs activities of osteoarthritis rehabilitation with 3axes' accelerometers ang gyroscopes. The machine learning models are used to classification.
 
-##Lower limbs activity
+## Lower limbs activity
 
