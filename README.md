@@ -120,11 +120,9 @@ def show_confusion_matrix(validations, predictions, LABELS):
     plt.xlabel('Predicted Label')
     plt.show()
 ```
-1. MLP
- * Validation loss
+ * MLP
+ 1. Validation loss
  ![image](https://github.com/Chi-chicken/Lower-limbs-activity-recognition/blob/main/MLP_validation%20loss.png)
- * Confusion matrix
+ 2. Confusion matrix
  ![image](https://github.com/Chi-chicken/Lower-limbs-activity-recognition/blob/main/MLP_confusion%20matrix.png)
-2. CNN
- * Validation loss
- * Confusion matrix
+
